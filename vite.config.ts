@@ -6,36 +6,37 @@ const routes = {
   '/index.html': {
     title: 'Sign In'
   },
-  '/signup.html': {
+  '/pages/signup.html': {
     title: 'Sign Up'
   },
-  '/chats.html': {
+  '/pages/chats.html': {
     title: 'Chats'
   },
-  '/profile.html': {
+  '/pages/profile.html': {
     title: 'Profile'
   },
-  '/404.html': {
+  '/pages/404.html': {
     title: '404'
   },
-  '/server-error.html': {
+  '/pages/server-error.html': {
     title: 'Server Error'
   }
 }
 
 export default defineConfig({
   base: '/',
-  root: resolve(__dirname, ''),
+  root: resolve(__dirname, 'src'),
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, './index.html')
+        main: resolve(__dirname, 'src/index.html'),
+        pages: resolve(__dirname, 'src/pages/index.html')
       }
     }
   },
   plugins: [
     handlebars({
-      partialDirectory: resolve(__dirname, 'partials'),
+      partialDirectory: resolve(__dirname, 'src/partials'),
       context(page) {
         return routes[page]
       }

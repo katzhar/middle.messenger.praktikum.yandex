@@ -28,18 +28,18 @@ const routes = {
 
 export default defineConfig({
   base: '/',
-  root: resolve(__dirname, 'src'),
+  root: resolve(__dirname, ''),
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html'),
-        nested: resolve(__dirname, 'src/nested/index.html')
+        main: resolve(__dirname, './index.html'),
+        nested: resolve(__dirname, './nested/index.html')
       }
     }
   },
   plugins: [
     handlebars({
-      partialDirectory: resolve(__dirname, 'src/partials'),
+      partialDirectory: resolve(__dirname, 'partials'),
       context(page) {
         return routes[page]
       }

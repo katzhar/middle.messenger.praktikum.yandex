@@ -28,7 +28,7 @@ const routes = {
 
 export default defineConfig({
   base: '/',
-  root: resolve(__dirname, 'src'),
+  root: resolve(__dirname, ''),
   build: {
     rollupOptions: {
       input: {

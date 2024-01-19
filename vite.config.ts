@@ -3,34 +3,37 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 const routes = {
-  '/signin.html': {
+  '/index.html': {
     title: 'Sign In'
   },
-  '/signup.html': {
+  '/nested/signin.html': {
+    title: 'Sign In'
+  },
+  '/nested/signup.html': {
     title: 'Sign Up'
   },
-  '/chats.html': {
+  '/nested/chats.html': {
     title: 'Chats'
   },
-  '/profile.html': {
+  '/nested/profile.html': {
     title: 'Profile'
   },
-  '/404.html': {
+  '/nested/404.html': {
     title: '404'
   },
-  '/server-error.html': {
+  '/nested/server-error.html': {
     title: 'Server Error'
   }
 }
 
 export default defineConfig({
   base: '/',
-  root: resolve(__dirname, 'src/pages'),
+  root: resolve(__dirname, 'src'),
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        pages: resolve(__dirname, 'src/pages/index.html')
+        nested: resolve(__dirname, 'src/nested/index.html')
       }
     }
   },

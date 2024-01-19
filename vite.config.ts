@@ -6,22 +6,19 @@ const routes = {
   '/index.html': {
     title: 'Sign In'
   },
-  '/nested/signin.html': {
-    title: 'Sign In'
-  },
-  '/nested/signup.html': {
+  '/signup.html': {
     title: 'Sign Up'
   },
-  '/nested/chats.html': {
+  '/chats.html': {
     title: 'Chats'
   },
-  '/nested/profile.html': {
+  '/profile.html': {
     title: 'Profile'
   },
-  '/nested/404.html': {
+  '/404.html': {
     title: '404'
   },
-  '/nested/server-error.html': {
+  '/server-error.html': {
     title: 'Server Error'
   }
 }

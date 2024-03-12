@@ -1,45 +1,22 @@
-import handlebars from 'vite-plugin-handlebars'
-import { defineConfig } from 'vite'
-import { resolve } from 'path'
-
-const routes = {
-  '/index.html': {
-    title: 'Sign In'
-  },
-  '/pages/signup.html': {
-    title: 'Sign Up'
-  },
-  '/pages/chats.html': {
-    title: 'Chats'
-  },
-  '/pages/profile.html': {
-    title: 'Profile'
-  },
-  '/pages/404.html': {
-    title: '404'
-  },
-  '/pages/server-error.html': {
-    title: 'Server Error'
-  }
-}
+import handlebars from 'vite-plugin-handlebars';
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   base: '/',
-  root: resolve(__dirname, 'src'),
+  root: resolve(__dirname, 'views'),
+  server: {
+    port: 3000,
+  },
   build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'src/index.html'),
-        pages: resolve(__dirname, 'src/pages/index.html')
-      }
-    }
+    outDir: 'dist',
+    assetsDir: '',
+    sourcemap: false,
+    minify: true,
   },
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, 'src/partials'),
-      context(page) {
-        return routes[page]
-      }
-    })
-  ]
-})
+    }),
+  ],
+});

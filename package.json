@@ -3,9 +3,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "node index.js",
+    "build": "tsc",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": "19.8.1",
+    "npm": "9.5.1"
   },
   "devDependencies": {
     "@types/node": "^20.10.8",

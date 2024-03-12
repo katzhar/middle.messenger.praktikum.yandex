@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container-chats">
+      <div class="discussions">
+        <div class="chat-header">
+          <a href="/profile">Profile &gt;</a>
+          <div class="searchbar">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+        {{> chat username='Lera' msg='idk' time='2:55pm' }} {{> chat username='Rustam' msg='You: Lorem Ipsum?'
+        time='12:01pm' }} {{> chat username='Nastia Grazina' msg='Lorem Ipsum' time='yesterday' }} {{> chat
+        username='Roman' msg='Lorem Ipsum?' time='yesterday' }} {{> chat username='Sonia' msg='Lorem Ipsum!'
+        time='7/01/2024' }} {{> chat username='Olia' msg='You: Lorem Ipsum Lorem Ipsum' time='2/01/2024' }} {{> chat
+        username='Oleg' msg='You: Lorem Ipsum <3' time='31/12/2023' }} {{> chat username='Dima' msg='Lorem! Ipsum!'
+        time='11/11/2023' }} {{> chat username='Dima Popov' msg='You: Lorem! Ipsum!' time='1/11/2023' }}
+      </div>
+      <div class="container-chat">
+        <p>Choose a chat to send a message</p>
+      </div>
+    </div>
+  </body>
+</html>

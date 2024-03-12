@@ -1,7 +1,6 @@
 {
   "name": "ya-pr",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,6 +13,8 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
+    "express": "4.18.3",
+    "express-hbs": "2.5.0",
     "postcss-nesting": "^12.0.2",
     "ts-node": "^10.9.2",
     "vite-plugin-handlebars": "^2.0.0"
